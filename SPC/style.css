@@ -1,0 +1,72 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.main-wrapper {
+    display: flex;
+    gap: 30px;
+    width: 90%;
+    max-width: 900px;
+}
+
+.game-container, .leaderboard-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.game-container {
+    flex: 2;
+    text-align: center;
+}
+
+/* Leaderboard specifieke styling */
+.leaderboard-container {
+    flex: 1;
+    min-width: 250px;
+}
+
+.leaderboard-container h2 {
+    margin-top: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#leaderboard-list {
+    padding-left: 20px;
+    font-size: 1.1rem;
+}
+
+#leaderboard-list li {
+    margin: 15px 0;
+    padding: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Bestaande game styles */
+.score-board { display: flex; justify-content: space-around; margin-bottom: 25px; }
+.score-box { background: rgba(0, 0, 0, 0.2); padding: 10px 20px; border-radius: 10px; min-width: 80px; text-align: center; }
+.score-label { display: block; font-size: 0.8rem; text-transform: uppercase; color: #cbd5e1; }
+.score-val { font-size: 1.5rem; font-weight: bold; color: #38bdf8; }
+.arena { display: flex; justify-content: space-between; align-items: center; margin: 30px 0; }
+.hand-emoji { font-size: 4rem; }
+.shake { animation: shakeHand 0.5s ease infinite; }
+@keyframes shakeHand { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+.countdown-zone { font-size: 1.5rem; font-weight: bold; min-width: 100px; color: #fbbf24; text-align: center; }
+.control-panel { display: flex; justify-content: center; gap: 15px; }
+.choice-btn { background: white; border: none; border-radius: 15px; padding: 15px; font-size: 2.5rem; cursor: pointer; transition: all 0.2s ease; }
+.choice-btn span { font-size: 0.9rem; font-weight: bold; color: #334155; display: block; }
+.choice-btn:hover { transform: scale(1.1); }
+.choice-btn:disabled { opacity: 0.5; cursor: not-allowed; }

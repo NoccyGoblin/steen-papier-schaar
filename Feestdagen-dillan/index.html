@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urenregistratie Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f6f9; padding: 20px; }
+        .dashboard-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        .dashboard-card h3 { margin-top: 0; color: #333; border-bottom: 2px solid #eaeaea; padding-bottom: 10px; }
+        .holiday-list { list-style: none; padding: 0; margin: 0; }
+        .holiday-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f1f1f1; }
+        .holiday-item:last-child { border-bottom: none; }
+        .holiday-name { font-weight: bold; color: #2c3e50; }
+        .holiday-date { color: #7f8c8d; font-size: 0.9em; }
+        .error-msg { color: #e74c3c; }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-card">
+        <h3>Eerstvolgende Feestdagen (NL)</h3>
+        <ul id="feestdagen-lijst" class="holiday-list">
+            <li>Feestdagen laden...</li>
+        </ul>
+    </div>
+
+    <script src="feestdagen.js"></script>
+</body>
+</html>

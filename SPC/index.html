@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steen Papier Schaar - Leaderboard Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <div class="game-container">
+            <h1>Steen, Papier, Schaar</h1>
+
+            <div class="score-board">
+                <div class="score-box">
+                    <span class="score-label">Speler</span>
+                    <span id="player-name-display" class="score-val">...</span>
+                </div>
+                <div class="score-box">
+                    <span class="score-label">Streak</span>
+                    <span id="current-streak" class="score-val">0</span>
+                </div>
+            </div>
+
+            <div class="arena">
+                <div class="player-hand">
+                    <h3>Jij</h3>
+                    <div id="human-hand" class="hand-emoji">👊</div>
+                </div>
+                <div class="countdown-zone">
+                    <h2 id="countdown-text">Kies je wapen!</h2>
+                </div>
+                <div class="player-hand">
+                    <h3>Computer</h3>
+                    <div id="computer-hand" class="hand-emoji">👊</div>
+                </div>
+            </div>
+
+            <div class="result-display">
+                <h2 id="result">Wie gaat er winnen?</h2>
+            </div>
+
+            <div class="control-panel">
+                <button class="choice-btn" id="steen">👊<br><span>Steen</span></button>
+                <button class="choice-btn" id="papier">✋<br><span>Papier</span></button>
+                <button class="choice-btn" id="schaar">✌️<br><span>Schaar</span></button>
+            </div>
+            
+            <button id="change-player-btn" style="margin-top: 20px; padding: 5px 10px; cursor: pointer;">Wissel van speler</button>
+        </div>
+
+        <div class="leaderboard-container">
+            <h2>🏆 Top 5 Leaderboard</h2>
+            <ol id="leaderboard-list">
+                </ol>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
